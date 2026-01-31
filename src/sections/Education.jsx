@@ -13,7 +13,7 @@ export default function Education() {
     <Section
       id="education"
       title="Education"
-      subtitle="Simple, clean, and easy for recruiters to scan."
+      subtitle="Simple, clean, and easy to scan."
     >
       <motion.div
         initial="hidden"

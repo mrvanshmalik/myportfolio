@@ -66,7 +66,7 @@ export default function Hero() {
                 1200,
                 "I build responsive dashboards and enterprise-style projects.",
                 1200,
-                "I build clean, interview-ready projects for FAANG screening.",
+                "I build clean projects .",
                 1200,
               ]}
               wrapper="span"
@@ -148,12 +148,12 @@ export default function Hero() {
             <div className="rounded-xl2 border border-base-border bg-white/5 p-4">
               <div className="text-xs font-semibold text-base-muted">Stack</div>
               <div className="mt-1 text-sm font-extrabold">
-                React • Vite • Tailwind
+                React • Vite • Tailwind • Python • C++
               </div>
             </div>
             <div className="rounded-xl2 border border-base-border bg-white/5 p-4">
               <div className="text-xs font-semibold text-base-muted">Goal</div>
-              <div className="mt-1 text-sm font-extrabold">FAANG Shortlist</div>
+              <div className="mt-1 text-sm font-extrabold">Become a Good Developer</div>
             </div>
           </motion.div>
         </motion.div>

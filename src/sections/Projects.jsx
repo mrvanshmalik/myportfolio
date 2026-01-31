@@ -37,7 +37,7 @@ export default function Projects() {
     <Section
       id="projects"
       title="Projects"
-      subtitle="Premium UI, clean code, and interview-ready architecture."
+      subtitle="Premium UI, clean code, and Good architecture."
     >
       <motion.div
         initial="hidden"
