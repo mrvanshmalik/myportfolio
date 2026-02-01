@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
+import { Github, ExternalLink } from "lucide-react";
 import Badge from "../ui/Badge";
 import Card from "../ui/Card";
+import Button from "../ui/Button";
 import useReducedMotion from "../../hooks/useReducedMotion";
 import { scaleIn } from "../../utils/motion";
 import { cn } from "../../utils/cn";
@@ -31,6 +33,7 @@ function Img({ src, alt }) {
 
 export default function ProjectCard({ project, onOpen, active = false }) {
   const reduced = useReducedMotion();
+  const { links = {} } = project;
 
   return (
     <motion.div
@@ -44,8 +47,6 @@ export default function ProjectCard({ project, onOpen, active = false }) {
         tiltMaxAngleY={10}
         glareEnable
         glareMaxOpacity={0.18}
-        scale={1.02}
-        className="h-full"
       >
         <Card
           className={cn(
@@ -56,33 +57,45 @@ export default function ProjectCard({ project, onOpen, active = false }) {
         >
           <div className="relative aspect-16/10 overflow-hidden border-b border-base-border">
             <Img src={project.image} alt={project.title} />
-            <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent opacity-70" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent" />
           </div>
 
           <div className="flex flex-1 flex-col gap-3 p-5">
             <div>
-              <div className="flex items-start justify-between gap-2">
-                <h3 className="text-base font-extrabold">{project.title}</h3>
-              </div>
+              <h3 className="text-base font-extrabold">{project.title}</h3>
               <p className="mt-1 line-clamp-2 text-sm text-base-muted">
                 {project.description}
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {(project.tech || []).slice(0, 5).map((t) => (
-                <Badge key={t} tone="neutral">
-                  {t}
-                </Badge>
+              {(project.tech || []).slice(0, 4).map((t) => (
+                <Badge key={t}>{t}</Badge>
               ))}
-              {(project.tech || []).length > 5 ? (
-                <Badge tone="info">+{(project.tech || []).length - 5}</Badge>
-              ) : null}
+            </div>
+
+            {/* 🔥 ACTION BUTTONS */}
+            <div className="mt-auto flex gap-2">
+              {links.github && (
+                <a href={links.github} target="_blank" rel="noreferrer">
+                  <Button variant="secondary" size="sm">
+                    <Github className="h-4 w-4" /> GitHub
+                  </Button>
+                </a>
+              )}
+
+              {links.live && links.live !== "https://" && (
+                <a href={links.live} target="_blank" rel="noreferrer">
+                  <Button variant="primary" size="sm">
+                    <ExternalLink className="h-4 w-4" /> Live
+                  </Button>
+                </a>
+              )}
             </div>
 
             <button
-              onClick={() => onOpen?.(project)}
-              className="mt-auto rounded-xl2 border border-base-border bg-white/5 px-4 py-3 text-left text-sm font-semibold transition hover:bg-white/8"
+              onClick={() => onOpen(project)}
+              className="mt-3 text-left text-sm font-semibold text-brand-secondary hover:underline"
             >
               View details →
             </button>

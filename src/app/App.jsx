@@ -1,7 +1,3 @@
-
-
-
-
 import ScrollTopButton from "../components/ui/ScrollTopButton";
 import { useEffect } from "react";
 import Lenis from "lenis";
