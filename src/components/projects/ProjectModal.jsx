@@ -45,7 +45,7 @@ export default function ProjectModal({ open, onClose, project }) {
             </div>
           </div>
 
-          {/* 🔥 LINKS */}
+          {/* LINKS */}
           <div className="mt-3 flex gap-3">
             {links.github && (
               <a href={links.github} target="_blank" rel="noreferrer">

@@ -74,7 +74,7 @@ export default function ProjectCard({ project, onOpen, active = false }) {
               ))}
             </div>
 
-            {/* 🔥 ACTION BUTTONS */}
+            {/*ACTION BUTTONS */}
             <div className="mt-auto flex gap-2">
               {links.github && (
                 <a href={links.github} target="_blank" rel="noreferrer">
