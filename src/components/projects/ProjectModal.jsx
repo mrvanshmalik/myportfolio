@@ -1,8 +1,30 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
 import Modal from "../ui/Modal";
 import Badge from "../ui/Badge";
 import Button from "../ui/Button";
+
+function ModalImg({ src, alt }) {
+  const [bad, setBad] = useState(false);
+
+  if (!src || bad) {
+    return (
+      <div className="flex h-64 w-full items-center justify-center bg-white/5 text-sm font-semibold text-base-muted">
+        No Preview
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      onError={() => setBad(true)}
+      className="h-full w-full object-cover"
+    />
+  );
+}
 
 export default function ProjectModal({ open, onClose, project }) {
   const tech = useMemo(() => project?.tech || [], [project]);
@@ -15,11 +37,7 @@ export default function ProjectModal({ open, onClose, project }) {
     <Modal open={open} onClose={onClose} title={project.title}>
       <div className="grid gap-6 md:grid-cols-2">
         <div className="overflow-hidden rounded-xl2 border border-base-border bg-white/5">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="h-full w-full object-cover"
-          />
+          <ModalImg src={project.image} alt={project.title} />
         </div>
 
         <div className="grid gap-4">
@@ -45,25 +63,26 @@ export default function ProjectModal({ open, onClose, project }) {
             </div>
           </div>
 
-          {/* LINKS */}
-          <div className="mt-3 flex gap-3">
+          <div className="mt-3 grid gap-2 sm:flex sm:flex-wrap">
             {links.github && (
               <a href={links.github} target="_blank" rel="noreferrer">
-                <Button variant="secondary">
+                <Button variant="secondary" className="w-full sm:w-auto">
                   <Github className="h-4 w-4" />
                   GitHub <ArrowUpRight className="h-4 w-4" />
                 </Button>
               </a>
             )}
 
-            {links.live && links.live !== "https://" && (
-              <a href={links.live} target="_blank" rel="noreferrer">
-                <Button variant="primary">
-                  <ExternalLink className="h-4 w-4" />
-                  Live <ArrowUpRight className="h-4 w-4" />
-                </Button>
-              </a>
-            )}
+            {links.live &&
+              links.live !== "https://" &&
+              links.live !== "https://" && (
+                <a href={links.live} target="_blank" rel="noreferrer">
+                  <Button variant="primary" className="w-full sm:w-auto">
+                    <ExternalLink className="h-4 w-4" />
+                    Live <ArrowUpRight className="h-4 w-4" />
+                  </Button>
+                </a>
+              )}
           </div>
         </div>
       </div>

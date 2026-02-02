@@ -74,23 +74,42 @@ export default function ProjectCard({ project, onOpen, active = false }) {
               ))}
             </div>
 
-            {/*ACTION BUTTONS */}
-            <div className="mt-auto flex gap-2">
+            <div className="mt-auto grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
               {links.github && (
-                <a href={links.github} target="_blank" rel="noreferrer">
-                  <Button variant="secondary" size="sm">
+                <a
+                  href={links.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="col-span-2 sm:col-auto"
+                >
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    className="w-full sm:w-auto"
+                  >
                     <Github className="h-4 w-4" /> GitHub
                   </Button>
                 </a>
               )}
 
-              {links.live && links.live !== "https://" && (
-                <a href={links.live} target="_blank" rel="noreferrer">
-                  <Button variant="primary" size="sm">
-                    <ExternalLink className="h-4 w-4" /> Live
-                  </Button>
-                </a>
-              )}
+              {links.live &&
+                links.live !== "https://" &&
+                links.live !== "https://" && (
+                  <a
+                    href={links.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="col-span-2 sm:col-auto"
+                  >
+                    <Button
+                      variant="primary"
+                      size="sm"
+                      className="w-full sm:w-auto"
+                    >
+                      <ExternalLink className="h-4 w-4" /> Live
+                    </Button>
+                  </a>
+                )}
             </div>
 
             <button

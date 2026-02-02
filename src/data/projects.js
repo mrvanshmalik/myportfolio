@@ -2,6 +2,8 @@ import hiremetricsImg from "../assets/images/projects/hiremetrics.png";
 import mybookingImg from "../assets/images/projects/mybooking.png";
 import haryanviImg from "../assets/images/projects/haryanvi-lunch.png";
 
+import myportfolioImg from "../assets/images/projects/myportfolio.png";
+
 export const projects = [
   {
     id: "hiremetrics",
@@ -36,7 +38,7 @@ export const projects = [
     tech: ["React", "CSS", "UI/UX"],
     links: {
       github: "https://github.com/mrvanshmalik/mybooking",
-      live: "https://",
+      live: "https://mybooking-bus-booking-react-project.vercel.app/",
     },
   },
   {
@@ -50,11 +52,27 @@ export const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     links: {
       github: "https://github.com/mrvanshmalik/haryanvi-lunch",
-      live: "https://",
+      live: "https://haryanvi-lunch-hotel.vercel.app/",
+    },
+  },
+
+  // MYPORTFOLIO
+  {
+    id: "myportfolio",
+    title: "MyPortfolio",
+    subtitle: "Portfolio website (animated + responsive)",
+    image: myportfolioImg,
+    description:
+      "A modern, data-driven portfolio website with smooth animations, reusable sections, and responsive design.",
+    highlights: [
+      "Data-driven sections using /data files (easy updates)",
+      "Smooth animations and clean UI components",
+      "Responsive layout for mobile/tablet/desktop",
+    ],
+    tech: ["React", "Vite", "Tailwind", "Framer Motion"],
+    links: {
+      github: "https://github.com/mrvanshmalik/myportfolio",
+      live: "https://myportfolio-25oi.vercel.app/",
     },
   },
 ];
-
-
-
-
