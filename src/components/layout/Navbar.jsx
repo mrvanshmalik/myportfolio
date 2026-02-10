@@ -17,6 +17,7 @@ const NAV = [
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
   { id: "certifications", label: "Certifications" },
+  { id: "contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -24,7 +25,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const active = useScrollSpy(
     NAV.map((n) => n.id),
-    140,
+    
   );
 
   const items = useMemo(() => NAV, []);

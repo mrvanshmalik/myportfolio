@@ -51,19 +51,19 @@ export default function ProjectCard({ project, onOpen, active = false }) {
         <Card
           className={cn(
             "group relative flex h-full flex-col overflow-hidden transition",
-            "hover:-translate-y-1 hover:shadow-lift",
+            "hover:-translate-y-3 hover:shadow-lift",
             active ? "ring-2 ring-brand-secondary/25" : "",
           )}
         >
           <div className="relative aspect-16/10 overflow-hidden border-b border-base-border">
             <Img src={project.image} alt={project.title} />
-            <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
           </div>
 
           <div className="flex flex-1 flex-col gap-3 p-5">
             <div>
               <h3 className="text-base font-extrabold">{project.title}</h3>
-              <p className="mt-1 line-clamp-2 text-sm text-base-muted">
+              <p className="mt-8 line-clamp-2 text-sm text-base-muted">
                 {project.description}
               </p>
             </div>

@@ -10,7 +10,7 @@ export default function Badge({ className = "", tone = "soft", ...props }) {
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold",
+        "inline-flex items-center rounded-full px-3 py-2 text-xs font-semibold hover:bg-yellow-300/5 shadow-2xl hover:shadow-amber-200/15",
         tones[tone],
         className,
       )}

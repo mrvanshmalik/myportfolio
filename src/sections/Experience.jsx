@@ -51,7 +51,7 @@ export default function Experience() {
                       <div className="text-sm text-base-muted">{item.org}</div>
                     </div>
 
-                    <div className="rounded-full bg-brand-secondary/10 px-3 py-1 text-xs font-semibold text-base-text ring-1 ring-brand-secondary/20">
+                    <div className="rounded-full bg-brand-secondary/10 px-3 py-1 text-xs font-semibold text-base-text ring-1  transition-transform duration-300 ring-brand-secondary/30">
                       {item.period}
                     </div>
                   </div>

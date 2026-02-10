@@ -20,10 +20,10 @@ export default function Section({ id, title, subtitle, children }) {
             {title ? (
               <h2 className="text-balance text-2xl font-extrabold tracking-tight md:text-3xl">
                 <span
-                  className="bg-linear-to-r from-brand-secondary via-white to-brand-primary bg-clip-text text-transparent"
+                  className="bg-linear-to-r from-green-900 via-white to-yellow-400 bg-clip-text text-transparent"
                   style={{
                     backgroundSize: "200% 200%",
-                    animation: "shimmer 5s linear infinite",
+                    animation: "shimmer 20s linear infinite",
                   }}
                 >
                   {title}
@@ -37,7 +37,7 @@ export default function Section({ id, title, subtitle, children }) {
               </p>
             ) : null}
 
-            <div className="mt-6 h-px w-full bg-linear-to-r from-white/0 via-white/14 to-white/0" />
+            <div className="mt-6 h-px w-full bg-linear-to-r from-white/50 via-white/14 to-white/0" />
           </motion.div>
         )}
 
