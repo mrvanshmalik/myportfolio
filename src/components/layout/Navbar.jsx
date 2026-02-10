@@ -62,7 +62,6 @@ export default function Navbar() {
                 <div className="text-sm font-bold tracking-tight">
                   Vansh Malik
                 </div>
-                
               </div>
             </button>
 
