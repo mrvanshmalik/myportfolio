@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="text-sm font-semibold">My Portfolio</div>
             <div className="text-xs text-base-muted">
-              Built with React, Vite, Tailwind 
+              
             </div>
           </div>
           <div className="text-xs text-base-muted">© {year} Vansh Malik</div>

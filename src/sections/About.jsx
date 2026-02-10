@@ -7,7 +7,7 @@ export default function About() {
     <Section
       id="about"
       title="About"
-      subtitle="Short intro — clean and professional."
+      
     >
       <Card className="p-6 md:p-8">
         <p className="text-sm text-base-muted md:text-base">{profile.summary}</p>

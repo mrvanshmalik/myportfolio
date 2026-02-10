@@ -21,7 +21,6 @@ export default function Certifications() {
     <Section
       id="certifications"
       title="Certifications"
-      subtitle="PDF certificates — clean cards + quick preview."
     >
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((c) => (

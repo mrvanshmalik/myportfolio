@@ -1,10 +1,10 @@
 export const profile = {
   name: "Vansh Malik",
   role: "Developer",
-  headline: "React • Tailwind • Vite • C++ • Python ",
+  headline: "React • Tailwind • Boostrap •Type Script • C++ • Python • C ",
   location: "India",
   summary:
-    "I’m a Computer Science student focused on Full-Stack development. I build responsive, modern UIs with React + Tailwind, and I love clean animations + smooth UX. I design projects with reusable components, data-driven content, and production-friendly structure.",
+    "Hi, I’m a B.Tech CSE ’28 student and an aspiring Software Development Engineer.I have a strong foundation in web development and amI build responsive web apps using React, TypeScript, JavaScript, Tailwind CSS, and Bootstrap. I’m also strengthening my core fundamentals with Data Structures & Algorithms, and coding in Python & C++.Currently, I’m learning MERN and working on projects to improve my development skills.",
   email: "malikvansh2704@gmail.com",
   github: "https://github.com/mrvanshmalik",
   linkedin: "https://www.linkedin.com/in/vanshmalik01",

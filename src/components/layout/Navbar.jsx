@@ -17,7 +17,6 @@ const NAV = [
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
   { id: "certifications", label: "Certifications" },
-  { id: "contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -57,15 +56,13 @@ export default function Navbar() {
               className="group flex items-center gap-3"
             >
               <div className="grid h-10 w-10 place-items-center rounded-xl2 border border-base-border bg-white/5 shadow-soft">
-                <span className="text-sm font-extrabold text-white">VM</span>
+                <span className="text-sm font-extrabold text-white">V.M</span>
               </div>
               <div className="text-left">
-                <div className="text-sm font-extrabold tracking-tight">
+                <div className="text-sm font-bold tracking-tight">
                   Vansh Malik
                 </div>
-                <div className="text-[11px] text-base-muted">
-                  React • Vite • Tailwind
-                </div>
+                
               </div>
             </button>
 

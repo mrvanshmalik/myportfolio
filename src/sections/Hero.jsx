@@ -62,11 +62,15 @@ export default function Hero() {
           >
             <TypeAnimation
               sequence={[
-                "I build modern React apps with premium UI + smooth animations.",
+                "CSE’28 student aspiring SDE, skilled in React, TypeScript, MERN stack, and strong programming fundamentals.",
                 1200,
-                "I build responsive dashboards and enterprise-style projects.",
+                "Passionate about building scalable web applications using React, Tailwind, JavaScript, and modern full-stack technologies.",
                 1200,
-                "I build clean projects .",
+                "Aspiring Software Development Engineer with hands-on experience in frontend development and growing MERN expertise.",
+                1200,
+                "Strong foundation in HTML, CSS, JavaScript, React, TypeScript, Python, and C++ with problem-solving mindset.",
+                1200,
+                "Driven CSE student learning full-stack development, writing clean code, and aiming for high-impact software engineering roles",
                 1200,
               ]}
               wrapper="span"
@@ -143,12 +147,12 @@ export default function Hero() {
           >
             <div className="rounded-xl2 border border-base-border bg-white/5 p-4">
               <div className="text-xs font-semibold text-base-muted">Focus</div>
-              <div className="mt-1 text-sm font-extrabold">Frontend + UI</div>
+            <div className="mt-1 text-sm font-extrabold">Software Developer </div>
             </div>
             <div className="rounded-xl2 border border-base-border bg-white/5 p-4">
-              <div className="text-xs font-semibold text-base-muted">Stack</div>
+              <div className="text-xs font-semibold text-base-muted">Skills</div>
               <div className="mt-1 text-sm font-extrabold">
-                React • Vite • Tailwind • Python • C++
+                React • Tailwind • Boostrap •Type Script • C++ • Python • C
               </div>
             </div>
             <div className="rounded-xl2 border border-base-border bg-white/5 p-4">

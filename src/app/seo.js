@@ -2,7 +2,7 @@
 export const seo = {
   title: "Vansh Malik • Developer",
   description:
-    "Portfolio of Vansh Malik —  skilled in React, Vite, Tailwind CSS, JavaScript, and building modern, animated web apps.",
+    "Portfolio of Vansh Malik —  skilled in React, Boostrap, Tailwind CSS, JavaScript.",
   siteName: "Vansh Malik",
   ogImage: "/og-image.png",
   resumeUrl: "/resume.pdf",

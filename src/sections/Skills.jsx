@@ -26,7 +26,6 @@ export default function Skills() {
     <Section
       id="skills"
       title="Skills"
-      subtitle="Organized categories with animated chips and clean readability."
     >
       <motion.div
         initial="hidden"
@@ -42,11 +41,10 @@ export default function Skills() {
           >
             <Card className="p-6">
               <div className="flex items-center justify-between gap-3">
-                <div className="text-sm font-semibold">{group.title}</div>
-                <span className="text-xs font-semibold text-base-muted">
-                  {group.items.length} skills
-                </span>
-              </div>
+                <div className="text-sm font-semibold">{group.title}
+                  </div>
+                </div>
+
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {group.items.map((item) => (
@@ -57,7 +55,7 @@ export default function Skills() {
               <div className="mt-5 h-px w-full bg-base-border" />
 
               <p className="mt-4 text-sm text-base-muted">
-                Clean fundamentals + practical project work.
+                
                 
               </p>
             </Card>

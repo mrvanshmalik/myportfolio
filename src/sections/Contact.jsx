@@ -57,7 +57,7 @@ export default function Contact() {
     <Section
       id="contact"
       title="Contact"
-      subtitle="Quick links for recruiters — email, GitHub, LinkedIn + resume."
+      subtitle="Quick links — email, GitHub, LinkedIn + resume."
     >
       <motion.div
         initial="hidden"

@@ -60,7 +60,7 @@ export const projects = [
   {
     id: "myportfolio",
     title: "MyPortfolio",
-    subtitle: "Portfolio website (animated + responsive)",
+    subtitle: "Portfolio website ",
     image: myportfolioImg,
     description:
       "A modern, data-driven portfolio website with smooth animations, reusable sections, and responsive design.",

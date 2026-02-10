@@ -21,7 +21,7 @@ export default function Experience() {
     <Section
       id="experience"
       title="Experience"
-      subtitle="A clean timeline with strong bullet points and smooth reveal."
+      
     >
       <motion.div
         initial="hidden"
