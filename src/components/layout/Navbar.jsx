@@ -6,7 +6,7 @@ import useReducedMotion from "../../hooks/useReducedMotion";
 import { cn } from "../../utils/cn";
 import { ease } from "../../utils/motion";
 import Container from "./Container";
-import Button from "../ui/Button";
+import Button from "../ui/Button"; // buttons-->look
 import { seo } from "../../app/seo";
 
 const NAV = [
@@ -23,10 +23,7 @@ const NAV = [
 export default function Navbar() {
   const reduced = useReducedMotion();
   const [open, setOpen] = useState(false);
-  const active = useScrollSpy(
-    NAV.map((n) => n.id),
-    
-  );
+  const active = useScrollSpy(NAV.map((e) => e.id));
 
   const items = useMemo(() => NAV, []);
 
@@ -41,14 +38,14 @@ export default function Navbar() {
 
   const go = (id) => {
     setOpen(false);
-    const el = document.getElementById(id);
+    const el = document.getElementById(`${id}`);
     if (!el) return;
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="border-b border-base-border bg-black/30 backdrop-blur-xl">
+      <div className="border-b border-base-border/0 bg-black/40 backdrop-blur-xl">
         <Container className="py-3">
           <div className="flex items-center justify-between gap-3">
             {/* Brand */}
@@ -57,7 +54,7 @@ export default function Navbar() {
               className="group flex items-center gap-3"
             >
               <div className="grid h-10 w-10 place-items-center rounded-xl2 border border-base-border bg-white/5 shadow-soft">
-                <span className="text-sm font-extrabold text-white">V.M</span>
+                <span className="text-sm font-bold text-white">V.M</span>
               </div>
               <div className="text-left">
                 <div className="text-sm font-bold tracking-tight">
@@ -77,10 +74,28 @@ export default function Navbar() {
                     className={cn(
                       "rounded-full px-3 py-2 text-sm font-semibold transition",
                       "hover:bg-white/6",
-                      isActive ? "bg-white/10 text-white" : "text-base-muted",
+                      isActive
+                        ? " text-white "
+                        : "text-base-muted",
                     )}
                   >
-                    {it.label}
+                    <AnimatePresence>
+                      {isActive && (
+                        <motion.span
+                          layoutId="active-pill"
+                          className="absolute inset-0 rounded-full bg-white/15"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 0.5 }}
+                          exit={{ opacity: 0 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 500,
+                            damping: 40,
+                          }}
+                        />
+                      )}
+                    </AnimatePresence>
+                    <span className="relative z-10">{it.label}</span>
                   </button>
                 );
               })}
@@ -124,7 +139,6 @@ export default function Navbar() {
         </Container>
       </div>
 
-      {/* Mobile overlay drawer */}
       <AnimatePresence>
         {open && (
           <>

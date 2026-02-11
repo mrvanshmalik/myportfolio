@@ -22,8 +22,10 @@ export default function useScrollSpy(sectionIds = []) {
       },
       {
         root: null,
-        threshold: [0.2, 0.35, 0.5],
-        rootMargin: "-15% 0px -65% 0px",
+        threshold: [0, 0.05, 0.1, 0.2],
+        rootMargin: `-90px 0px 0% 0px`,
+
+        
       }
     );
 

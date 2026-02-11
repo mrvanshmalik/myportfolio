@@ -58,6 +58,7 @@ export default function Contact() {
       id="contact"
       title="Contact"
       subtitle="Quick links — email, GitHub, LinkedIn + resume."
+      className="scroll-mt-24 pb-24"
     >
       <motion.div
         initial="hidden"
